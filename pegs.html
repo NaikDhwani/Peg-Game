@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Triangle Peg Game</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div id="gameBoard" class="column boardContainer">
+            <!--Game Board-->
+            <script>init(5)</script>
+        </div>
+
+        <!--Information-->
+        <div id="information" class="column informationContainer">
+            <h1>Triangle Peg Game</h1>
+            <p>
+                White Circle => Empty Pocket(No Peg)
+                <br />Colored Cirlce => Pegs
+            </p>
+            <br />
+            <p id="rules"><b>Rules:</b></p>
+            <ol>
+                <li>You must jump each peg over another peg, but only if there is an open space.</li>
+                <li>Each peg you jump over must be removed.</li>
+                <li>You win if only one peg is left at the end of the game.</li>
+            </ol>
+            <br />
+            <p>If you have done everything right, you should only have one peg left. Good luck!</p>
+            <br />
+            <p><b>Drag and drop pegs to win the game.</b></p>
+            <p>*Drag and drop the peg close enough to the empty space otherwise it will show incorrect move.</p>
+        </div>
+    </div>
+
+    <!--Reset board, Moves message and Win Message-->
+    <div id="bottom">
+        <button id="reset" class="resetButton" onclick="startingValues(5)">Reset</button>
+        <button id="randomReset" class="resetButton" onclick="randomReset()">Random Reset</button>
+        <p id="moveMessage" class="message">Move!</p>
+        <p id="resultMessage" class="message">Good Luck!</p>
+    </div>
+</body>
+</html>
